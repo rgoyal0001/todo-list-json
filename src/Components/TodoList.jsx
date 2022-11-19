@@ -21,7 +21,7 @@ export const TodoList=()=>{
                 todos.map((todo)=>{
                     return(
                         <div key={todo.id}>
-                            <p>{todo.title}</p>
+                            <p style={{color:todo.status?'green':'red'}}>{todo.title}</p>
                             <button onClick={handleDelete(todo.id)}>Delete</button>
                         </div>
                     )
